@@ -6,4 +6,3 @@ secretless_broker_archive: '{{ secretless_broker_name}}.{{ secretless_broker_arc
 secretless_broker_url: '{{ secretless_broker_mirror }}/v{{ secretless_broker_ver }}/{{ secretless_broker_archive }}'
 secretless_broker_checksum: '{{ secretless_broker_checksums[secretless_broker_ver][secretless_broker_platform] }}'
 secretless_broker_install_dir: '{{ secretless_broker_parent_install_dir }}/{{ secretless_broker_name }}'
-
