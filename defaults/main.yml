@@ -1,13 +1,16 @@
 ---
 # defaults file for secretless_broker
-secretless_broker_ver: '1.1.0'
+secretless_broker_ver: '1.4.2'
 secretless_broker_os: linux
 secretless_broker_arch: amd64
 secretless_broker_archivetype: tar.gz
+secretless_broker_parent_install_dir: /usr/local
 
 secretless_broker_mirror: https://github.com/cyberark/secretless-broker/releases/download
 secretless_broker_checksums:
   '1.1.0':
     # https://github.com/cyberark/secretless-broker/releases/download/v1.1.0/secretless-broker_1.1.0_linux_amd64.tar.gz
     linux_amd64: sha256:8e354de65663d2d6e2f732cc4bd972ce2bc7713cc467056fce2997714a911a0b
-secretless_broker_parent_install_dir: /usr/local
+  '1.4.2':
+    # https://github.com/cyberark/secretless-broker/releases/download/v1.4.2/secretless-broker_1.4.2_linux_amd64.tar.gz
+    linux_amd64: sha256:b88df1ab07863cfde97161fb6024b6a8937b39f4e95d957cc6e50c79438f20d2
