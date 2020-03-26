@@ -1,10 +1,11 @@
 ---
 # defaults file for secretless_broker
-secretless_broker_ver: '1.4.2'
+secretless_broker_ver: '1.5.2'
 secretless_broker_os: linux
 secretless_broker_arch: amd64
 secretless_broker_archivetype: tar.gz
 secretless_broker_parent_install_dir: /usr/local
+secretless_broker_privilege_escalate: True
 
 secretless_broker_mirror: https://github.com/cyberark/secretless-broker/releases/download
 secretless_broker_checksums:
@@ -14,3 +15,10 @@ secretless_broker_checksums:
   '1.4.2':
     # https://github.com/cyberark/secretless-broker/releases/download/v1.4.2/secretless-broker_1.4.2_linux_amd64.tar.gz
     linux_amd64: sha256:b88df1ab07863cfde97161fb6024b6a8937b39f4e95d957cc6e50c79438f20d2
+    # https://github.com/cyberark/secretless-broker/releases/download/v1.4.2/secretless-broker_1.4.2_darwin_amd64.tar.gz
+    darwin_amd64: sha256:42999230c817edb3def74c136b89a283b4817455656dde59250ad1c974e28152
+  '1.5.2':
+    # https://github.com/cyberark/secretless-broker/releases/download/v1.5.2/secretless-broker_1.5.2_linux_amd64.tar.gz
+    linux_amd64: sha256:b0486dce680cf92fb92f7ceb9ce8a43fa5a0b6312b431e0e5e06bdb3c08ec38f
+    # https://github.com/cyberark/secretless-broker/releases/download/v1.5.2/secretless-broker_1.5.2_darwin_amd64.tar.gz
+    darwin_amd64: sha256:d61c8733997e3e4c525aedd9eec4172c1ac76b30861926c4f10ec24c1cdb49ea

@@ -1,0 +1,3 @@
+---
+secretless_broker_os: darwin
+secretless_broker_privilege_escalate: False

@@ -10,7 +10,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: look for existing install
-  become: yes
+  become: '{{ secretless_broker_privilege_escalate }}'
   stat:
     path: '{{ secretless_broker_install_dir }}'
   changed_when: False
@@ -18,7 +18,7 @@
 - when: not secretless_broker_binary.stat.exists
   block:
     - name: download
-      become: yes
+      become: '{{ secretless_broker_privilege_escalate }}'
       become_user: root
       get_url:
         url: '{{ secretless_broker_url }}'
@@ -26,7 +26,7 @@
         checksum: '{{ secretless_broker_checksum }}'
         mode: 0644
     - name: unarchive
-      become: yes
+      become: '{{ secretless_broker_privilege_escalate }}'
       become_user: root
       unarchive:
         remote_src: yes
@@ -35,13 +35,13 @@
         creates: '{{ secretless_broker_install_dir }}'
   always:
     - name: cleanup
-      become: yes
+      become: '{{ secretless_broker_privilege_escalate }}'
       become_user: root
       file:
         path: /tmp/{{ secretless_broker_archive }}
         state: absent
 - name: link
-  become: yes
+  become: '{{ secretless_broker_privilege_escalate }}'
   become_user: root
   with_items:
     - summon2

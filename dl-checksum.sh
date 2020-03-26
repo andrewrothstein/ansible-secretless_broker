@@ -20,7 +20,6 @@ dl()
 dl_ver() {
     local ver=$1
     # https://github.com/cyberark/secretless-broker/releases/download/v1.1.0/SHA256SUMS.txt
-    local rshafile=
     local lshafile=$DIR/secretless-broker-${ver}-SHA256SUMS.txt
 
     if [ ! -e $lshafile ];
@@ -30,8 +29,9 @@ dl_ver() {
 
     printf "  '%s':\n" $ver
     dl $ver $lshafile linux amd64
+    dl $ver $lshafile darwin amd64
 }
 
 
 
-dl_ver ${1:-1.4.2}
+dl_ver ${1:-1.5.2}
