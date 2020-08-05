@@ -2,3 +2,12 @@
 - hosts: all
   roles:
   - role: '{{ playbook_dir }}'
+  tasks:
+  - command: /usr/local/bin/summon2 --version
+    register: summon2_test_output
+  - debug:
+      msg: '{{ summon2_test_output.stdout }}'
+  - command: /usr/local/bin/secretless-broker --version
+    register: secretless_broker_test_output
+  - debug:
+      msg: '{{ secretless_broker_test_output.stdout }}'
